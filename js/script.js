@@ -415,7 +415,23 @@ function setupResumeButton() {
       this.style.transform = "translateY(-1px)";
     }, 150);
 
-    window.open("CV_POSHIYA_ABHI_TANSUKHBHAI_LJIET.pdf", "_blank");
+    // Detect mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const pdfUrl = "CV_POSHIYA_ABHI_TANSUKHBHAI_LJIET.pdf";
+    
+    if (isMobile) {
+      // For mobile devices, force download or use Google Docs viewer
+      const link = document.createElement('a');
+      link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + '/' + pdfUrl)}&embedded=true`;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // For desktop, open in new tab
+      window.open(pdfUrl, "_blank");
+    }
   });
 }
 
