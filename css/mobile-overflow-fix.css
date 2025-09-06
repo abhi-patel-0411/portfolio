@@ -1,0 +1,34 @@
+/* Mobile overflow fix */
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+    }
+    
+    .container, .container-fluid {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    [class*="col-"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Prevent AOS animations from causing overflow */
+    [data-aos] {
+        overflow: hidden;
+    }
+    
+    /* Fix specific elements that might cause overflow */
+    .hero-image, .profile-container, .orbit-system {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}

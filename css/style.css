@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 80px;
+}
+
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
@@ -1188,6 +1192,19 @@ body {
         border-radius: 8px;
         text-align: center;
         font-weight: 600;
+        background: transparent !important;
+    }
+    
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active {
+        background: transparent !important;
+        color: var(--text-secondary) !important;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 20%;
     }
     
     .theme-toggle {
@@ -1564,4 +1581,25 @@ body {
 * {
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+/* Brand Logo Animation */
+.brand-logo {
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.brand-logo rect {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo rect {
+    fill: var(--text-primary) !important;
+}
+
+.navbar-brand:hover .brand-logo text {
+    fill: var(--bg-primary) !important;
 }

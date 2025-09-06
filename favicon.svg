@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+  <rect width='32' height='32' fill='#000' rx='4'>
+    <animate attributeName='fill' values='#000;#333;#000' dur='3s' repeatCount='indefinite'/>
+  </rect>
+  <text x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' text-anchor='middle' fill='white'>
+    <animate attributeName='opacity' values='1;0.7;1' dur='2s' repeatCount='indefinite'/>
+    AP
+  </text>
+</svg>

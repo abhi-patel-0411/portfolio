@@ -1,0 +1,38 @@
+/* Smooth navbar scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar smooth transitions */
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background: rgba(var(--card-bg), 0.95) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth nav link hover */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}

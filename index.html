@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhi Poshiya  Portfolio</title>
+    <title>Abhi Poshiya - Portfolio</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000' rx='4'/><text x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' text-anchor='middle' fill='white'>AP</text></svg>">
-    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000' rx='4'/><text x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' text-anchor='middle' fill='white'>AP</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     
     <!-- Meta Tags -->
     <meta name="description" content="Abhi Poshiya - Full Stack Developer specializing in React.js, Next.js, Django, and modern web technologies.">
@@ -21,6 +22,10 @@
     <meta property="og:description" content="Full Stack Developer specializing in React.js, Next.js, Django, and modern web technologies.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-nine-rho-ff7f2thet6.vercel.app">
+    <meta property="og:image" content="https://portfolio-nine-rho-ff7f2thet6.vercel.app/img/a2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Abhi Poshiya Portfolio">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
@@ -31,6 +36,10 @@
     <link rel="canonical" href="https://portfolio-nine-rho-ff7f2thet6.vercel.app">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar-smooth.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/mobile-overflow-fix.css">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Structured Data -->
@@ -55,19 +64,25 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down" data-aos-duration="1000">
         <div class="container">
-            <a class="navbar-brand" href="#home">Abhi Poshiya</a>
+            <a class="navbar-brand" href="#home">
+                <svg width="32" height="32" viewBox="0 0 32 32" class="brand-logo">
+                    <rect width="32" height="32" fill="var(--accent-color)" rx="4"/>
+                    <text x="16" y="22" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="var(--bg-primary)">AP</text>
+                </svg>
+                Abhi Poshiya
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100"><a class="nav-link" href="#home" data-bs-toggle="collapse" data-bs-target="#navbarNav">Home</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200"><a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#navbarNav">About</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300"><a class="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target="#navbarNav">Projects</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400"><a class="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target="#navbarNav">Contact</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
                         <button class="theme-toggle" aria-label="Toggle theme">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
@@ -85,19 +100,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="hero-title">Hi, I'm <span class="accent-text">Abhi Poshiya</span></h1>
-                        <h2 class="hero-subtitle">Full Stack Developer</h2>
-                        <p class="hero-description">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">Hi, I'm <span class="accent-text">Abhi Poshiya</span></h1>
+                        <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Full Stack Developer</h2>
+                        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
                             Passionate Full-Stack Developer creating innovative web solutions with modern technologies. 
                             Specialized in React.js, Next.js, Django, and building scalable applications.
                         </p>
-                        <div class="hero-buttons">
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
                             <a href="#projects" class="btn btn-primary">View Projects</a>
                             <button class="resume-btn-small">
                                 <i class="fas fa-download"></i> Resume
                             </button>
                         </div>
-                        <div class="social-links">
+                        <div class="social-links" data-aos="fade-up" data-aos-delay="500">
                             <a href="https://github.com/abhi-patel-0411" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/abhi-poshiya-005228321" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="mailto:abhiposhiya0104@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -105,7 +120,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-image">
+                    <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
                         <div class="profile-container">
                             <div class="orbit-system">
                                 <div class="orbit orbit-1">
@@ -126,7 +141,7 @@
                                 </div>
                                 <div class="orbit orbit-5">
                                     <div class="orbit-element"><i class="fab fa-node-js"></i></div>
-                                    <div class="orbit-element orbit-element-2"><i class="fab fa-django"></i></div>
+                                    <div class="orbit-element orbit-element-2"><i class="" style="color:green">DJ</i></div>
                                 </div>
                                 <div class="orbit orbit-6">
                                     <div class="orbit-element"><i class="fab fa-git-alt"></i></div>
@@ -148,12 +163,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title">About Me</h2>
+                    <h2 class="section-title" data-aos="fade-up">About Me</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="about-content">
+                    <div class="about-content" data-aos="fade-right" data-aos-delay="200">
                         <p>
                             I'm a passionate Full-Stack Developer currently pursuing my degree at LJ Institute of Engineering and Technology. 
                             I love creating efficient, scalable solutions and have experience working with 
@@ -166,20 +181,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
                     <div class="skills-section">
                         <h3>Skills</h3>
                         <div class="skills-grid">
                             <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">React.js</span>
                             <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">TailwindCSS</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">Bootstrap</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MySQL</span>
                             <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Git</span>
                         </div>
                     </div>
                 </div>
@@ -187,28 +202,14 @@
         </div>
     </section>
 
-    <!-- Currently Section -->
-    <!-- <section class="currently-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="currently-card">
-                        <h3>Currently Working On</h3>
-                        <p>Building modern web applications with React.js and Next.js, focusing on movie booking platforms and restaurant ordering systems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-header">
-                        <h2 class="section-title">Featured Projects</h2>
-                        <p class="section-subtitle">Some of my recent work</p>
+                        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Some of my recent work</p>
                     </div>
                 </div>
             </div>
@@ -223,13 +224,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title">Technologies I Work With</h2>
-                    <p class="section-subtitle">Trusted by developers worldwide</p>
+                    <h2 class="section-title" data-aos="fade-up">Technologies I Work With</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Trusted by developers worldwide</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="tech-marquee">
+                    <div class="tech-marquee" data-aos="fade-up" data-aos-delay="200">
                         <div class="marquee-gradient-left"></div>
                         <div class="marquee-inner">
                             <div class="marquee-content">
@@ -242,8 +243,6 @@
                                 <div class="tech-icon"><i class="fab fa-node-js"></i><span>Node.js</span></div>
                                 <div class="tech-icon"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
                                 <div class="tech-icon django-icon"><span class="django-text">DJ</span><span>Django</span></div>
-                                <div class="tech-icon nextjs-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4AbyUgWdCURTGs62QQAIJoKgI5C0BkwKgCCBKqGyEABREJABK/QsLQQHw9h8U0rASopCkoPS+na5bRq13e20dfnB993yf9849OsF6IpzEG9EkPoklseMs+VmTa5z8zs31SDwTNWJIbAmosOXaGr/7qNXcSpSJGQGNzHgP67XmEvFBKARuROG9JFHzF2JA4I8ZsN4qJWk2Fw8hXfrnMoF/Rj43Ew98WHAnytzzWD5iescAU+55fOvVSxfcbjfS6TQymQwkSbrY3OfzMa3f71cLUT3sCBcxvCBkDQ/V6/Xgcrl+1RYKBSwWCxSLRbUAX8ybr86tUABerVYLZrP5rDabzaLb7SKXy4lszFeC7W+IBBiPx5hMJlAUBaVSCXq9/kQbj8fRbreRTCZFZuGd0A0EA7DGqVQK6/Uaq9UKsVjsRBuJRFCv1xGNRkX3gm55TQCTyYRKpYJ9jUYjNnQ/tYFAAPl8HsFgUCAA89btRAN0Oh322S0WCwuzL1mWYbPZjlqv14tEIqH6Wji7qwMYDAZ25vF40O/32Xmj0YDRaGTndrsdoVAIDodDOMBSQwBGOBzGfD7HZrP5rr5qQTOEoihPi0UNouJABItG05pgE7EjJu26YDYKhvXeBMtX7GlgsRmX7PYoO+OuM98nwtiDWx+H+3N+0DQNGGMwDOPnTE3T5B7B51UAgiCgbVscx4F935EkCWhEiqJAkiTuJXxcBUAlyzKGYQC9dV3h+/4zlPw4J6ITAFSu62JZFtAjMKqqgtO6vXFQ8TkAqiiKQEu5bRvquoYoitxUzCVGVVUhTdNfP87zHPM8Y5omhGHILUa3yTF1h7o1jiO6roNt21xyfKshoflTt/q+R5ZlxA9chuRWS2ZZFoqiQFmWCIKAzvXUkt1uSh3HQRzHZEygaRqXKb3VlhMrkkZ4ngdd12l5uWz5rcGEWi/L8pckSR+CILz+STRjjL0zxl7+ZTi9Gs/rZ+L5N8AJA23K4ax1AAAAAElFTkSuQmCC" alt="Next.js" class="tech-logo"><span>Next.js</span></div>
-                                <div class="tech-icon mongodb-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADoElEQVR4Aa1XA5AlMRDtMtfe/TNrzPy1z7Zt21euY/ls+658VzrbxbNt23auX+Vvzf5VskjVq8mkO3mdTndA2sVlJ5CZ2o+i05aSYR/j/7tkul8DqKMNMuhAl2qsGKm5jA1kuO9TTJqgmHTBRIzUEpAy6ECXDVqPvlTlEpkTzLObTab9tYiU/3XgGGNaX/h/FkUmBVNlCncu4M6nKUbOtFwilw2UL0dfjGGmnKIYu0DT5VZ9crkfyBm4KyaPdgMVGwFgLIxppNdTr7dpP6YYhbujmDDcErSoDYA62lRGwBOPy4+LwARftvKccuYGIyBF0LD6gj4PB1BHG2RqIwz7LLioVEGw6ARasCWobaGgewMFfRkOoI42yNT9JcdM8irR6dns+m8VBhwAV1s8i6M9BP0cIejtUAB1tEEGHYUB4ACXlV3MAM5zpettQSHs5unNBX1nwncgl0AdbZBBB7oaS7G+KPDi2aKnSvdH8KAZmYLO9hH0bTiIvYA2yKADXfUy2E/ITIsjbJ1aax/EM5vYWNCnYYLeM+TMAdTRBhl0oKsZC1Y/4jxerpV2Lv5u7+q99q8Zr4Z4x8K2Lh59hQHgBDcZ9nGlB8IsQTlZ3u5/z3jA0X9rgOOR7yw72VtQZqY6GMGJA4ytvauM/mB2afN8QXcHIO8dl1/pJwk/eAyA7EZ/QQ1zORh1ssG6g/x/q2/AQCbxkH3k78legvZ3x9pX0QD3G30DWrIB94oZANLDTL65E9eHOwbcZAMa6RugtwShPFi9HEFXefCvxch2cFCuaSd3Q7RBdqmvoMJs9NFcAnUQOscuCH95sgCkmP2yto5RLHOywNYKQr00BAKSBU1uKskQgPhu6iBoYWvvtilNpa6pl4b6GxHSKo9T8VxfSQSsZPfPaYXUBCCDDnT1NyJsxeyuZ0ojDM9uOKqhdD82neEdAa6PlDEBGXQMDXJs/9iKUbhxo+Iwcs6DGP5u4bUXox0DxBi0QaY+BwBw4QAsKmxJDm+d3xXZ4OyKqRmC9nZzDNjNwWmnQwYd7eNYcSFRpGV8mvQCkJKOY1j/xgyuUiWwwJcF57WWAvBLdgzw1Yh653J6DleyCi6lKbiU6nlBGoC6Vtrhwqt+rBhp+tfyrEwJ7Wu5VV/3YVLI1p5RPEwQ8YD6YYJHDh47lSrhWSHVfpqhL8bAM6/KxXDnYZ+ACyv1OEWeo2+NFZeViK2TiZbhAON1v4fjFEAdbZBBpzLP8//gWaNQ3aj4mQAAAABJRU5ErkJggg==" alt="MongoDB" class="tech-logo"><span>MongoDB</span></div>
                                 <div class="tech-icon"><i class="fab fa-git-alt"></i><span>Git</span></div>
                                 <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
                                 <!-- Duplicate for seamless loop -->
@@ -256,8 +255,6 @@
                                 <div class="tech-icon"><i class="fab fa-node-js"></i><span>Node.js</span></div>
                                 <div class="tech-icon"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
                                 <div class="tech-icon django-icon"><span class="django-text">DJ</span><span>Django</span></div>
-                                <div class="tech-icon nextjs-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4AbyUgWdCURTGs62QQAIJoKgI5C0BkwKgCCBKqGyEABREJABK/QsLQQHw9h8U0rASopCkoPS+na5bRq13e20dfnB993yf9849OsF6IpzEG9EkPoklseMs+VmTa5z8zs31SDwTNWJIbAmosOXaGr/7qNXcSpSJGQGNzHgP67XmEvFBKARuROG9JFHzF2JA4I8ZsN4qJWk2Fw8hXfrnMoF/Rj43Ew98WHAnytzzWD5iescAU+55fOvVSxfcbjfS6TQymQwkSbrY3OfzMa3f71cLUT3sCBcxvCBkDQ/V6/Xgcrl+1RYKBSwWCxSLRbUAX8ybr86tUABerVYLZrP5rDabzaLb7SKXy4lszFeC7W+IBBiPx5hMJlAUBaVSCXq9/kQbj8fRbreRTCZFZuGd0A0EA7DGqVQK6/Uaq9UKsVjsRBuJRFCv1xGNRkX3gm55TQCTyYRKpYJ9jUYjNnQ/tYFAAPl8HsFgUCAA89btRAN0Oh322S0WCwuzL1mWYbPZjlqv14tEIqH6Wji7qwMYDAZ25vF40O/32Xmj0YDRaGTndrsdoVAIDodDOMBSQwBGOBzGfD7HZrP5rr5qQTOEoihPi0UNouJABItG05pgE7EjJu26YDYKhvXeBMtX7GlgsRmX7PYoO+OuM98nwtiDWx+H+3N+0DQNGGMwDOPnTE3T5B7B51UAgiCgbVscx4F935EkCWhEiqJAkiTuJXxcBUAlyzKGYQC9dV3h+/4zlPw4J6ITAFSu62JZFtAjMKqqgtO6vXFQ8TkAqiiKQEu5bRvquoYoitxUzCVGVVUhTdNfP87zHPM8Y5omhGHILUa3yTF1h7o1jiO6roNt21xyfKshoflTt/q+R5ZlxA9chuRWS2ZZFoqiQFmWCIKAzvXUkt1uSh3HQRzHZEygaRqXKb3VlhMrkkZ4ngdd12l5uWz5rcGEWi/L8pckSR+CILz+STRjjL0zxl7+ZTi9Gs/rZ+L5N8AJA23K4ax1AAAAAElFTkSuQmCC" alt="Next.js" class="tech-logo"><span>Next.js</span></div>
-                                <div class="tech-icon mongodb-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADoElEQVR4Aa1XA5AlMRDtMtfe/TNrzPy1z7Zt21euY/ls+658VzrbxbNt23auX+Vvzf5VskjVq8mkO3mdTndA2sVlJ5CZ2o+i05aSYR/j/7tkul8DqKMNMuhAl2qsGKm5jA1kuO9TTJqgmHTBRIzUEpAy6ECXDVqPvlTlEpkTzLObTab9tYiU/3XgGGNaX/h/FkUmBVNlCncu4M6nKUbOtFwilw2UL0dfjGGmnKIYu0DT5VZ9crkfyBm4KyaPdgMVGwFgLIxppNdTr7dpP6YYhbujmDDcErSoDYA62lRGwBOPy4+LwARftvKccuYGIyBF0LD6gj4PB1BHG2RqIwz7LLioVEGw6ARasCWobaGgewMFfRkOoI42yNT9JcdM8irR6dns+m8VBhwAV1s8i6M9BP0cIejtUAB1tEEGHYUB4ACXlV3MAM5zpettQSHs5unNBX1nwncgl0AdbZBBB7oaS7G+KPDi2aKnSvdH8KAZmYLO9hH0bTiIvYA2yKADXfUy2E/ITIsjbJ1aax/EM5vYWNCnYYLeM+TMAdTRBhl0oKsZC1Y/4jxerpV2Lv5u7+q99q8Zr4Z4x8K2Lh59hQHgBDcZ9nGlB8IsQTlZ3u5/z3jA0X9rgOOR7yw72VtQZqY6GMGJA4ytvauM/mB2afN8QXcHIO8dl1/pJwk/eAyA7EZ/QQ1zORh1ssG6g/x/q2/AQCbxkH3k78legvZ3x9pX0QD3G30DWrIB94oZANLDTL65E9eHOwbcZAMa6RugtwShPFi9HEFXefCvxch2cFCuaSd3Q7RBdqmvoMJs9NFcAnUQOscuCH95sgCkmP2yto5RLHOywNYKQr00BAKSBU1uKskQgPhu6iBoYWvvtilNpa6pl4b6GxHSKo9T8VxfSQSsZPfPaYXUBCCDDnT1NyJsxeyuZ0ojDM9uOKqhdD82neEdAa6PlDEBGXQMDXJs/9iKUbhxo+Iwcs6DGP5u4bUXox0DxBi0QaY+BwBw4QAsKmxJDm+d3xXZ4OyKqRmC9nZzDNjNwWmnQwYd7eNYcSFRpGV8mvQCkJKOY1j/xgyuUiWwwJcF57WWAvBLdgzw1Yh653J6DleyCi6lKbiU6nlBGoC6Vtrhwqt+rBhp+tfyrEwJ7Wu5VV/3YVLI1p5RPEwQ8YD6YYJHDh47lSrhWSHVfpqhL8bAM6/KxXDnYZ+ACyv1OEWeo2+NFZeViK2TiZbhAON1v4fjFEAdbZBBpzLP8//gWaNQ3aj4mQAAAABJRU5ErkJggg==" alt="MongoDB" class="tech-logo"><span>MongoDB</span></div>
                                 <div class="tech-icon"><i class="fab fa-git-alt"></i><span>Git</span></div>
                                 <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
                             </div>
@@ -269,22 +266,18 @@
         </div>
     </section>
 
-
-
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Let's work together on your next project</p>
+                    <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's work together on your next project</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form action="https://formspree.io/f/xldwokzy" method="POST" id="contactForm" class="contact-form">
-                        <input type="hidden" name="_next" value="https://your-domain.com/index.html#contact">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <form action="https://formspree.io/f/xldwokzy" method="POST" id="contactForm" class="contact-form" data-aos="fade-up" data-aos-delay="200">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -319,13 +312,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>&copy; 2024 Abhi Poshiya. All rights reserved.</p>
+                    <p>&copy; 2025 Abhi Poshiya. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos-init.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

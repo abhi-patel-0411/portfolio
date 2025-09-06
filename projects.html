@@ -6,8 +6,9 @@
     <title>Projects - Abhi Poshiya</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23000;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23333;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='900' text-anchor='middle' fill='white'%3EAP%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23000;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23333;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='900' text-anchor='middle' fill='white'%3EAP%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     
     <!-- Meta Tags -->
     <meta name="description" content="Projects by Abhi Poshiya - Full Stack Developer. Explore my portfolio of web applications built with React, Django, and modern technologies.">
@@ -16,6 +17,10 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar-smooth.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/mobile-overflow-fix.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,19 +29,25 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down" data-aos-duration="1000">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Abhi Poshiya</a>
+            <a class="navbar-brand" href="index.html">
+                <svg width="32" height="32" viewBox="0 0 32 32" class="brand-logo">
+                    <rect width="32" height="32" fill="var(--accent-color)" rx="4"/>
+                    <text x="16" y="22" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="var(--bg-primary)">AP</text>
+                </svg>
+                Abhi Poshiya
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
                         <button class="theme-toggle" aria-label="Toggle theme">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
@@ -54,8 +65,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-header">
-                        <h1 class="page-title">All Projects</h1>
-                        <p class="page-subtitle">Explore my complete portfolio of work</p>
+                        <h1 class="page-title" data-aos="fade-up">All Projects</h1>
+                        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Explore my complete portfolio of work</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +74,7 @@
             <!-- Filters -->
             <div class="row mb-4">
                 <div class="col-12">
-                    <div class="filters-section">
+                    <div class="filters-section" data-aos="fade-up" data-aos-delay="200">
                         <div class="filter-controls">
                             <input type="text" class="filter-input" placeholder="Search projects...">
                             <div class="dropdown-filters">
@@ -119,6 +130,8 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos-init.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
