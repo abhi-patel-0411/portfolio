@@ -100,7 +100,29 @@ document.addEventListener("DOMContentLoaded", function () {
   setupDropdowns();
   setupResumeButton();
   setupContactForm();
+  setupMobileNavClose();
 });
+
+// Mobile navbar auto-close functionality
+function setupMobileNavClose() {
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Only close if navbar is currently collapsed (mobile view) and toggler is visible
+      if (navbarToggler && navbarCollapse && 
+          window.getComputedStyle(navbarToggler).display !== 'none' &&
+          navbarCollapse.classList.contains('show')) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide();
+      }
+    });
+  });
+}
 
 function initializeTheme() {
   document.documentElement.setAttribute("data-theme", currentTheme);
