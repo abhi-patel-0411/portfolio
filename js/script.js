@@ -106,17 +106,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Mobile navbar auto-close functionality
 function setupMobileNavClose() {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  const navbarCollapse = document.getElementById('navbarNav');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+  const navbarCollapse = document.getElementById("navbarNav");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
       // Only close if navbar is currently collapsed (mobile view) and toggler is visible
-      if (navbarToggler && navbarCollapse && 
-          window.getComputedStyle(navbarToggler).display !== 'none' &&
-          navbarCollapse.classList.contains('show')) {
+      if (
+        navbarToggler &&
+        navbarCollapse &&
+        window.getComputedStyle(navbarToggler).display !== "none" &&
+        navbarCollapse.classList.contains("show")
+      ) {
         const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-          toggle: false
+          toggle: false,
         });
         bsCollapse.hide();
       }
@@ -438,15 +441,20 @@ function setupResumeButton() {
     }, 150);
 
     // Detect mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const pdfUrl = "CV_POSHIYA_ABHI_TANSUKHBHAI_LJIET.pdf";
-    
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+    const pdfUrl = "AbhiPoshiyaResume.pdf";
+
     if (isMobile) {
       // For mobile devices, force download or use Google Docs viewer
-      const link = document.createElement('a');
-      link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + '/' + pdfUrl)}&embedded=true`;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
+      const link = document.createElement("a");
+      link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(
+        window.location.origin + "/" + pdfUrl
+      )}&embedded=true`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -464,7 +472,10 @@ function setupContactForm() {
   const submitBtn = contactForm.querySelector(".submit-btn");
 
   // Check if returning from successful submission
-  if (window.location.hash === '#contact' && document.referrer.includes('formspree.io')) {
+  if (
+    window.location.hash === "#contact" &&
+    document.referrer.includes("formspree.io")
+  ) {
     showSuccessMessage();
   }
 
@@ -475,12 +486,14 @@ function setupContactForm() {
   });
 
   function showSuccessMessage() {
-    const successDiv = document.createElement('div');
-    successDiv.className = 'alert alert-success';
-    successDiv.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 9999; padding: 15px; background: #4CAF50; color: white; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);';
-    successDiv.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully!';
+    const successDiv = document.createElement("div");
+    successDiv.className = "alert alert-success";
+    successDiv.style.cssText =
+      "position: fixed; top: 20px; right: 20px; z-index: 9999; padding: 15px; background: #4CAF50; color: white; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);";
+    successDiv.innerHTML =
+      '<i class="fas fa-check-circle"></i> Message sent successfully!';
     document.body.appendChild(successDiv);
-    
+
     setTimeout(() => {
       successDiv.remove();
     }, 5000);
