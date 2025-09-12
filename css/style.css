@@ -744,10 +744,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--accent-color), var(--text-primary));
-    color: white;
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
     position: relative;
     overflow: hidden;
+}
+
+[data-theme="dark"] .project-logo-fallback {
+    background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
+    color: #1a1a1a;
 }
 
 .project-logo-fallback::before {

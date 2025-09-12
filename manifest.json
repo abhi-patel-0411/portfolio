@@ -1,0 +1,16 @@
+{
+  "name": "Abhi Poshiya - Full Stack Developer",
+  "short_name": "Abhi Poshiya",
+  "description": "Full Stack Developer specializing in React.js, Next.js, Django, and modern web technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
